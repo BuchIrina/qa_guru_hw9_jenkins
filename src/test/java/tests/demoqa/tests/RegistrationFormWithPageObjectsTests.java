@@ -4,16 +4,11 @@ import org.junit.jupiter.api.Test;
 import tests.demoqa.pages.RegistrationFormPage;
 
 import static io.qameta.allure.Allure.step;
+import static tests.demoqa.utils.TestData.*;
+
 
 public class RegistrationFormWithPageObjectsTests extends TestBase {
     RegistrationFormPage registrationFormPage = new RegistrationFormPage();
-    String firstName = "Darth";
-    String lastName = "Vader";
-    String email = "darty@gmail.com";
-    String mobile = "0123456789";
-    String subjects = "Eng";
-    String currentAddress = "Empire, Death Star";
-
 
     @Test
     void fillFormTest() {
@@ -25,16 +20,14 @@ public class RegistrationFormWithPageObjectsTests extends TestBase {
             registrationFormPage.setFirstName(firstName)
                     .setLastName(lastName)
                     .setEmail(email)
-                    .setGender("Male")
+                    .setGender(gender)
                     .setNumber(mobile)
-                    .setBirthDate("30", "November", "1986")
+                    .setBirthDate(day, month, year)
                     .setSubjects(subjects)
-                    .setHobbies("Sports")
-                    .setHobbies("Reading")
-                    .setHobbies("Music")
-                    .uploadPicture("img/QA-Tester-meme-03.jpg")
+                    .setHobbies(hobbies)
+                    .uploadPicture("img/" + picture)
                     .setAddress(currentAddress)
-                    .setStateAndCity("NCR", "Noida")
+                    .setStateAndCity(state, city)
                     .clickSubmit();
         });
 
@@ -42,14 +35,14 @@ public class RegistrationFormWithPageObjectsTests extends TestBase {
             registrationFormPage.checkResultsTableVisible()
                     .checkResult("Student Name", firstName + " " + lastName)
                     .checkResult("Student Email", email)
-                    .checkResult("Gender", "Male")
+                    .checkResult("Gender", gender)
                     .checkResult("Mobile", mobile)
-                    .checkResult("Date of Birth", "30 November,1986")
-                    .checkResult("Subjects", "English")
-                    .checkResult("Hobbies", "Sports, Reading, Music")
-                    .checkResult("Picture", "QA-Tester-meme-03.jpg")
+                    .checkResult("Date of Birth", day + " " + month + "," + year)
+                    .checkResult("Subjects", subjects)
+                    .checkResult("Hobbies", hobbies)
+                    .checkResult("Picture", picture)
                     .checkResult("Address", currentAddress)
-                    .checkResult("State and City", "NCR Noida");
+                    .checkResult("State and City", state + " " + city);
         });
     }
 }
