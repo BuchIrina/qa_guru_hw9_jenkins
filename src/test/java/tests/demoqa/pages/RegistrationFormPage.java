@@ -1,9 +1,9 @@
-package tests.com.buchneva.pages;
+package tests.demoqa.pages;
 
 import com.codeborne.selenide.SelenideElement;
-import tests.com.buchneva.pages.components.CalendarComponent;
-import tests.com.buchneva.pages.components.ResultsModal;
-import tests.com.buchneva.pages.components.StateAndCityComponent;
+import tests.demoqa.pages.components.CalendarComponent;
+import tests.demoqa.pages.components.ResultsModal;
+import tests.demoqa.pages.components.StateAndCityComponent;
 
 
 import static com.codeborne.selenide.Condition.text;

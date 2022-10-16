@@ -1,7 +1,7 @@
-package tests.com.buchneva.tests;
+package tests.demoqa.tests;
 
 import org.junit.jupiter.api.Test;
-import tests.com.buchneva.pages.RegistrationFormPage;
+import tests.demoqa.pages.RegistrationFormPage;
 
 import static io.qameta.allure.Allure.step;
 

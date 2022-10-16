@@ -1,4 +1,4 @@
-package tests.com.buchneva.pages.components;
+package tests.demoqa.pages.components;
 
 import static com.codeborne.selenide.Selenide.$;
 
