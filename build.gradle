@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    id 'io.qameta.allure' version '2.10.0'
+    id 'io.qameta.allure' version '2.11.0'
 }
 
 group 'org.example'
@@ -30,10 +30,10 @@ repositories {
 
 dependencies {
     testImplementation(
-            "com.codeborne:selenide:6.7.2",
+            "com.codeborne:selenide:6.7.4",
             "com.github.javafaker:javafaker:1.0.2",
-            "io.qameta.allure:allure-selenide:$allureVersion",
             "org.junit.jupiter:junit-jupiter:5.9.0",
+            "io.qameta.allure:allure-selenide:$allureVersion",
             "org.slf4j:slf4j-simple:$slf4jVersion"
     )
 }
